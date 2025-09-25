@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunia Kita 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Doodle Background Elements -->
+    <div class="doodle-bg">
+        <div class="doodle-heart">💖</div>
+        <div class="doodle-star">⭐</div>
+        <div class="doodle-cloud">☁️</div>
+        <div class="doodle-bunny">🐰</div>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page active">
+        <div class="login-container">
+            <h1>Login Dulu Ya Sayang 💕</h1>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Tulis nama kesayanganmu 💖" required>
+                <input type="password" id="password" placeholder="Bisikan rahasia kita 🔑" required>
+                <button type="submit">Masuk Yuk 😘</button>
+                <div id="error-message" class="error hidden">Upss, salah password nih 😝 Coba lagi ya cintaku 💕</div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery-page" class="page hidden">
+        <div class="navbar">
+            <span>Hai, Sayangku 💖</span>
+            <div class="navbar-buttons">
+                <button onclick="openMessageModal()">Kirim Pesan ke Kamu 💌</button>
+                <button onclick="openSavedMessagesModal()">Lihat Pesan Tersimpan 💌</button>
+            </div>
+            <button onclick="logout()">Keluar Dulu Ya 💌</button>
+        </div>
+        <div class="gallery-container">
+            <h1>Galeri Kenangan Kita 📸✨</h1>
+            <div class="cute-icon">😊</div>
+
+            <div id="gallery-grid" class="gallery-grid">
+                <!-- Dynamic items will be added here -->
+            </div>
+            <div id="pagination" class="pagination"></div>
+        </div>
+    </div>
+
+    <!-- Modal for Media Preview -->
+    <div id="media-modal" class="modal hidden">
+        <span class="close-btn" onclick="closeModal()">🤍</span>
+        <div class="modal-content">
+            <h3>Kenangan Manis Kita 💑</h3>
+            <img id="modal-image" class="modal-media" src="" alt="Kenangan">
+            <audio id="background-music" loop preload="auto" src="lagu/h.wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Message Modal -->
+    <div id="message-modal" class="modal hidden">
+        <span class="close-btn" onclick="closeMessageModal()">🤍</span>
+        <div class="modal-content message-modal-content">
+            <h3>Tulis Pesan Manis Buat Kamu 💕</h3>
+            <textarea id="message-text" placeholder="Aku sayang kamu banget hari ini 😘" rows="5"></textarea>
+            <div class="message-buttons">
+                <button onclick="saveMessage()">Simpan Pesan 💾</button>
+                <button onclick="sendWhatsAppMessage()">Kirim via WhatsApp 📲</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Saved Messages Modal -->
+    <div id="saved-messages-modal" class="modal hidden">
+        <span class="close-btn" onclick="closeSavedMessagesModal()">🤍</span>
+        <div class="modal-content saved-messages-content">
+            <h3>Pesan Tersimpan 💌</h3>
+            <div id="saved-messages-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
