@@ -4,7 +4,7 @@ const mediaItems = [
     { type: 'image', src: 'foto/3.jpg', placeholder: ' 🤩' },
     { type: 'image', src: 'foto/1.jpg', placeholder: ' ❤️' },
     { type: 'image', src: 'foto/4.jpg', placeholder: ' 🥰' },
-    { type: 'image', src: 'foto/.jpg', placeholder: ' 😍' },
+    { type: 'image', src: 'foto/12.jpg', placeholder: ' 😍' },
     { type: 'image', src: 'foto/6.jpg', placeholder: ' 😘' },
     { type: 'image', src: 'foto/7.jpg', placeholder: 'Klik cill 😘' },
     { type: 'image', src: 'foto/13.jpg', placeholder: '  😘' },
@@ -325,5 +325,6 @@ document.getElementById('saved-messages-modal').addEventListener('click', functi
         closeSavedMessagesModal();
     }
 });
+
 
 
